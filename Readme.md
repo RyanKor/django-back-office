@@ -2,8 +2,6 @@
 
 This is completely open-source python back-office code for someone who want to know and make their own it.
 
-
-
 This repo will target on:
 
 - Managing Startup Income & Expenditure
@@ -12,11 +10,13 @@ This repo will target on:
 
 - Developers who want to learn Django
 
-
-
 ## Guidance
 
+If you use this source code, you can manage these things below:
 
+1. Analyze your income and expense.
+2. Manage your work schedule.
+3. Check the process of your products.
 
 > 1. Click Github Star
 >
@@ -28,3 +28,7 @@ This repo will target on:
 >
 > - BTC : 12EP1BwbNbom5AhRkFHYuXJuFssXxZwbLn
 
+## Development Diary
+
+> 2020.06.09 : Organize the entire settings of back office, Make dashboard with CSS
+> 2020.06.13 : Add Chart.js in the index.html file

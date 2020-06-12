@@ -23,34 +23,38 @@
     <title>Ryan's Solution</title>
   </head>
   <body>
-    <nav>
-      <div class="header">
-        <div class="logo">Django Dashboard</div>
-        <div class="search">
-          <input type="text" placeholder="Search Here" />
-          <button>Search</button>
+    <div class="container">
+      <nav>
+        <div class="header">
+          <div class="logo">Django Dashboard</div>
+          <div class="search">
+            <input type="text" placeholder="Search Here" />
+            <button>Search</button>
+          </div>
         </div>
-      </div>
-      <div class="info">
-        <div class="menu">
-          <i class="fas fa-tachometer-alt"></i><a href="#">Dashboard</a>
+        <div class="info">
+          <div class="menu">
+            <i class="fas fa-tachometer-alt"></i><a href="#">Dashboard</a>
+          </div>
+          <div class="menu">
+            <i class="fas fa-address-card"></i><a href="#">User Profile</a>
+          </div>
+          <div class="menu">
+            <i class="fab fa-modx"></i><a href="#">Product List</a>
+          </div>
+          <div class="menu">
+            <i class="fas fa-envelope"></i><a href="#">Subscription</a>
+          </div>
+          <div class="menu">
+            <i class="fas fa-sign-out-alt"></i><a href="#">Logout</a>
+          </div>
+          <div class="menu">
+            <i class="fas fa-info"></i><a href="#">About</a>
+          </div>
         </div>
-        <div class="menu">
-          <i class="fas fa-address-card"></i><a href="#">User Profile</a>
-        </div>
-        <div class="menu">
-          <i class="fab fa-modx"></i><a href="#">Product List</a>
-        </div>
-        <div class="menu">
-          <i class="fas fa-envelope"></i><a href="#">Subscription</a>
-        </div>
-        <div class="menu">
-          <i class="fas fa-sign-out-alt"></i><a href="#">Logout</a>
-        </div>
-        <div class="menu"><i class="fas fa-info"></i><a href="#">About</a></div>
-      </div>
-      <div class="copyright">&copy Ryan 2020</div>
-    </nav>
-    {% block content %} {% endblock %}
+        <div class="copyright">&copy Developed by Ryan 2020</div>
+      </nav>
+      {% block content %} {% endblock %}
+    </div>
   </body>
 </html>
