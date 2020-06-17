@@ -79,9 +79,14 @@ WSGI_APPLICATION = 'management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'backoffice',
+        'USER': 'root',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
+    # 생성 시, 반드시 mysql schema를 콘솔 창에서 생성해줘야함.
 }
 
 
@@ -128,3 +133,17 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',  # 장고 내부 서버 저장
+    # 'allauth.account.auth_backends.AuthenticationBackend',  # 소셜 로그인 서버 저장
+)
+
+SITE_ID = 1
+# 관리자 페이지에서 확인 가능한데,
+
+LOGIN_REDIRECT_URL = '/'  # '/'는 메인 페이지로 돌아가라는 의미와 같다.
+# path('', views.home, name="home") urls.py
+LOGOUT_REDIRECT_URL = '/'

@@ -14,7 +14,7 @@ nav {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 100, 134);
+  background-color: #fffed6;
   align-items: center;
   justify-content: space-between;
 }

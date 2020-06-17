@@ -1,33 +1,16 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-<canvas class="income"></canvas>
+<div class="income-chart">
+  <canvas class="income"></canvas>
+</div>
+<div class="exp-chart">
+  <canvas class="expenditure"></canvas>
+</div>
+<div class="analysis-chart">
+  <canvas class="total"></canvas>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script>
-  let inc = document.querySelector(".income").getContext("2d");
-  let chart = new Chart(inc, {
-    // The type of chart we want to create
-    type: "line",
-
-    // The data for our dataset
-    data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [
-        {
-          label: "Income Management",
-          backgroundColor: "rgb(202, 212, 255)",
-          borderColor: "rgb(202, 212, 255)",
-          data: [0, 10, 5, 2, 20, 30, 45],
-        },
-      ],
-    },
-
-    // Configuration options go here
-    options: {},
-  });
-  //   Cannot change width, height with CSS files
-  // Reference
-  // https://www.chartjs.org/docs/latest/general/responsive.html
-  chart.canvas.style.height = "75vh";
-  chart.canvas.style.width = "75vw";
-</script>
+<script src="{% static 'js/income.js' %}"></script>
+<script src="{% static 'js/expenditure.js' %}"></script>
+<script src="{% static 'js/total.js' %}"></script>
 {% endblock %}

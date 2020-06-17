@@ -21,3 +21,7 @@ urlpatterns = [
     path('', include('office.urls')),
     path('accounts/', include('user.urls')),
 ]
+handler400 = 'office.views.bad_request'
+handler403 = 'office.views.not_authorized'
+handler404 = 'office.views.not_found'
+handler500 = 'office.views.server_error'
